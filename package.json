@@ -1,0 +1,19 @@
+{
+  "name": "promineo-week-12",
+  "version": "1.0.0",
+  "description": "CRUD application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.16"
+  }
+}
