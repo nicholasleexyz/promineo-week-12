@@ -7,7 +7,6 @@
     <title>WAPP!!!</title>
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -16,9 +15,6 @@
 </head>
 
 <body>
-    <!-- <div class="container"> -->
-    <!-- <div class="card"> -->
-
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -43,15 +39,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">asdf</span>
-                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Entry</h5>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="height: fit-content;">
+                    <span>Common Name</span> <input type="text" name="" id="">
+                    <span>Scientific Name</span> <input type="text" name="" id="">
+                    <span>Family</span> <input type="text" name="" id="">
+                    <span>Description: </span> <input type="text" name="" id="">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
