@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {plants} from './plantData.js';
+import {plants, updatePlants} from './plantData.js';
 
 /** @type {Number} */
 let idCounter = plants.length;
@@ -20,8 +20,12 @@ const entriesContainer = $('#entries');
 
 const saveBtn = $('#btn-save');
 
-/** @type{ PlantEntry[] } */
+/**
+ * The array that will hold the data and state
+ * @type{ PlantEntry[] } */
 let plantEntries = [];
+
+console.log(plants);
 
 /** Class representing a plant. */
 class PlantEntry {
@@ -86,19 +90,27 @@ class PlantEntry {
         plantScientificName.text('Scientific Name: '+this.scientificName + '\n\n');
         plantFamily.text('Plant Family: ' + this.family + '\n\n');
         plantDescription.text('Description: '+ this.description);
+
+        updateData();
+
         modal.hide();
         saveBtn.off('click');
-        console.log(plantEntries);
+        // console.log(plantEntries);
+        console.log(plants);
       });
     });
 
     deleteBtn.on('click', () => {
       // update array here
       plantEntries = plantEntries.filter((entry) => entry.id != this.id);
+
+      updateData();
+
       cardRoot.remove();
       modal.hide();
       saveBtn.off('click');
-      console.log(plantEntries);
+      // console.log(plantEntries);
+      console.log(plants);
     });
   }
 }
@@ -111,15 +123,19 @@ $('#btn-new-entry').on('click', () =>{
   modal.show();
 
   saveBtn.on('click', () => {
-    plantEntries.push(
-        new PlantEntry(
-            commonNameInput.val(),
-            scientificNameInput.val(),
-            familyInput.val(),
-            descriptionInput.val(),
-            idCounter++));
+    const cName = commonNameInput.val();
+    const sName = scientificNameInput.val();
+    const fam = familyInput.val();
+    const desc = descriptionInput.val();
+    const newId = idCounter++;
 
-    console.log(plantEntries);
+    const newPlantEntry = new PlantEntry(cName, sName, fam, desc, newId);
+
+    plantEntries.push(newPlantEntry);
+
+    updateData();
+    // console.log(plantEntries);
+    console.log(plants);
     modal.hide();
     saveBtn.off('click');
   });
@@ -128,3 +144,18 @@ $('#btn-new-entry').on('click', () =>{
 plantEntries = plants.map((plant, i) => {
   return new PlantEntry(plant.commonName, plant.scientificName, plant.family, plant.description, i);
 });
+
+/**
+ * syncs the plant data with the plantEntries array
+ */
+function updateData() {
+  const p = plantEntries.map((entry) => {
+    return {
+      commonName: entry.commonName,
+      scientificName: entry.scientificName,
+      family: entry.family,
+      description: entry.description};
+  });
+
+  updatePlants(p);
+}

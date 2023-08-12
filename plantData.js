@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 
 /** @type{ {commonName: String, scientificName: String, family: String, description: String}[] } */
-export const plants = [
+export let plants = [
   {'commonName': 'False \'ohe',
     'scientificName': 'Munroidendron racemosum (Forbes) Sherff',
     'family': 'Araliaceae',
@@ -48,3 +48,10 @@ export const plants = [
     'family': 'Asteraceae',
     'description': 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.'},
 ];
+
+/**
+ * @param {{commonName: String, scientificName: String, family: String, description: String}[] } newPlants
+ */
+export function updatePlants(newPlants) {
+  plants = newPlants;
+}
