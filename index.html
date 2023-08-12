@@ -8,6 +8,7 @@
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="node_modules/jquery/dist/jquery.js"></script>
@@ -41,18 +42,39 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Edit Entry</h5>
                 </div>
-                <div class="modal-body" style="height: fit-content;">
-                    <span>Common Name</span> <input type="text" name="" id="">
+                <form>
+                    <div class="modal-body" style="height: fit-content;">
+                        <!-- <span>Common Name</span> <input type="text" name="" id="">
                     <span>Scientific Name</span> <input type="text" name="" id="">
                     <span>Family</span> <input type="text" name="" id="">
-                    <span>Description: </span> <input type="text" name="" id="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                    <span>Description: </span> <input type="text" name="" id=""> -->
+                        <div class="mb-3">
+                            <label for="common-name" class="form-label">Common Name</label>
+                            <input type="text" class="form-control" id="common-name-input"
+                                aria-describedby="plant common name">
+                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="scientific-name" class="form-label">Scientfic Name</label>
+                            <input type="text" class="form-control" id="scientific-name-input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="family" class="form-label">Plant Family</label>
+                            <input type="text" class="form-control" id="family-input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="family" class="form-label">Description</label>
+                            <input type="text" class="form-control input-lg" id="description-input">
+                        </div>
+                    </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
         </div>
+    </div>
     </div>
 </body>
 
