@@ -4,6 +4,7 @@ import {plants} from './plantData.js';
 console.log(plants);
 /** @type {JQuery<HTMLElement>} */
 const elem = $('<div>');
+console.log(elem.text());
 
 /** Class representing a plant. */
 class Plant {
@@ -22,12 +23,6 @@ class Plant {
 }
 
 /*
-    <div class="card">
-        <span id="common-name"> </span>
-        <span id="scientific-name"> </span>
-        <span id="family"> </span>
-        <p id="description"> </p>
-    </div>
 */
 
 // function Initialize() {

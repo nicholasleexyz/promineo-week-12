@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,56 @@
     <title>WAPP!!!</title>
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="node_modules/jquery/dist/jquery.js"></script>
     <script src="index.js" type="module"></script>
 </head>
 
 <body>
+    <!-- <div class="container"> -->
+    <!-- <div class="card"> -->
 
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <span class="card-title">Common Name, </span>
+                <span class="fw-light fst-italic">Scientific Name</span>
+                <span class="card-text fw-bold">Family</span>
+                <p class="card-text">
+                    Description:
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae
+                    praesentium incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.</p>
+                <a href="#" class="btn btn-secondary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#m">
+            Launch demo modal
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="m" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">asdf</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

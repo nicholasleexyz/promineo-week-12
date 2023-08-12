@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 
 /** @type{ {common-name: String, scientific-name: String, family: String, description: String}[] } */
-export let names = [
+export let plants = [
   {'common-name': 'False \'ohe',
     'scientific-name': 'Munroidendron racemosum (Forbes) Sherff',
     'family': 'Araliaceae',
