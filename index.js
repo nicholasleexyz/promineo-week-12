@@ -21,7 +21,9 @@ const entriesContainer = $('#entries');
 const saveBtn = $('#btn-save');
 
 /**
- * The array that will hold the data and state
+ * The array that will hold the data and html elements.
+ * This is basically just a way to translate the plant array
+ * to html elements and back
  * @type{ PlantEntry[] } */
 let plantEntries = [];
 
@@ -91,7 +93,7 @@ class PlantEntry {
         plantFamily.text('Plant Family: ' + this.family + '\n\n');
         plantDescription.text('Description: '+ this.description);
 
-        updateData();
+        updatePlantData();
 
         modal.hide();
         saveBtn.off('click');
@@ -104,7 +106,7 @@ class PlantEntry {
       // update array here
       plantEntries = plantEntries.filter((entry) => entry.id != this.id);
 
-      updateData();
+      updatePlantData();
 
       cardRoot.remove();
       modal.hide();
@@ -133,7 +135,7 @@ $('#btn-new-entry').on('click', () =>{
 
     plantEntries.push(newPlantEntry);
 
-    updateData();
+    updatePlantData();
     // console.log(plantEntries);
     console.log(plants);
     modal.hide();
@@ -146,9 +148,9 @@ plantEntries = plants.map((plant, i) => {
 });
 
 /**
- * syncs the plant data with the plantEntries array
+ * Syncs the plant data with the plantEntries array
  */
-function updateData() {
+function updatePlantData() {
   const p = plantEntries.map((entry) => {
     return {
       commonName: entry.commonName,
