@@ -2,7 +2,7 @@
 import {plants} from './plantData.js';
 
 /** @type {Number} */
-let counter = plants.length;
+let idCounter = plants.length;
 
 /** @type {bootstrap.Modal} */
 const modal = new bootstrap.Modal(document.getElementById('modalEditEntry'));
@@ -15,7 +15,6 @@ const scientificNameInput = $('#scientific-name-input');
 const familyInput = $('#family-input');
 /** @type {JQuery<HTMLInputElement>} */
 const descriptionInput = $('#description-input');
-
 
 const entriesContainer = $('#entries');
 
@@ -118,7 +117,7 @@ $('#btn-new-entry').on('click', () =>{
             scientificNameInput.val(),
             familyInput.val(),
             descriptionInput.val(),
-            counter++));
+            idCounter++));
 
     console.log(plantEntries);
     modal.hide();
