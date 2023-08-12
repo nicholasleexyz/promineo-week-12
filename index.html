@@ -17,65 +17,144 @@
 
 <body>
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <span class="card-title">Common Name, </span>
-                <span class="fw-light fst-italic">Scientific Name</span>
-                <span class="card-text fw-bold">Family</span>
-                <p class="card-text">
-                    Description:
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae
-                    praesentium incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.</p>
-                <a href="#" class="btn btn-secondary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+        <div class="d-flex justify-content-start">
+            <span class="h1 m-5">Plants</span>
+            <a class="btn btn-primary btn-lg m-auto ">New Entry</a>
+        </div>
+        <div id="entries" class="d-flex flex-wrap">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="card-title">Common Name, </span>
+                    <span class="fw-light fst-italic">Scientific Name</span>
+                    <span class="card-text fw-bold">Family</span>
+                    <p class="card-text">
+                        Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae praesentium
+                        incidunt culpa accusantium exercitationem nam illum sequi omnis tempore.
+                    </p>
+                    <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditEntry">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
             </div>
         </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#m">
-            Launch demo modal
-        </button>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="m" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalEditEntry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Edit Entry</h5>
                 </div>
                 <form>
-                    <div class="modal-body" style="height: fit-content;">
-                        <!-- <span>Common Name</span> <input type="text" name="" id="">
-                    <span>Scientific Name</span> <input type="text" name="" id="">
-                    <span>Family</span> <input type="text" name="" id="">
-                    <span>Description: </span> <input type="text" name="" id=""> -->
+                    <div class="modal-body">
                         <div class="mb-3">
                             <label for="common-name" class="form-label">Common Name</label>
                             <input type="text" class="form-control" id="common-name-input"
-                                aria-describedby="plant common name">
-                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                aria-describedby="plant common name" placeholder="Sun Flower">
                         </div>
                         <div class="mb-3">
                             <label for="scientific-name" class="form-label">Scientfic Name</label>
-                            <input type="text" class="form-control" id="scientific-name-input">
+                            <input type="text" class="form-control" id="scientific-name-input"
+                                placeholder="Sun Flowerium">
                         </div>
                         <div class="mb-3">
                             <label for="family" class="form-label">Plant Family</label>
-                            <input type="text" class="form-control" id="family-input">
+                            <input type="text" class="form-control" id="family-input" placeholder="asteracie">
                         </div>
                         <div class="mb-3">
                             <label for="family" class="form-label">Description</label>
-                            <input type="text" class="form-control input-lg" id="description-input">
+                            <input type="text" class="form-control input-lg" id="description-input"
+                                placeholder="Sun Flowers are pretty cool.">
                         </div>
                     </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="modal-footer">
+                        <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                        <a class="btn btn-primary">Save</a>
+                    </div>
             </div>
             </form>
         </div>
     </div>
-    </div>
+
 </body>
 
 </html>
